@@ -16,6 +16,23 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
+
+  /*Tobii mods*/
+    .tobii-zoom{
+      width: 100%;
+  }
+  .tobii__slide figure > img {
+      padding-bottom: 50px;
+  }
+
+  /* iframe {
+      max-width: 90%;
+      margin: auto;
+  } */
+
+  .tobii {
+      background-color: black;
+  }
 }
 
 @layer components{
