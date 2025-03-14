@@ -1,11 +1,25 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 
-
 @theme {
   /* Her tilføjes theme variable // tokens */
+  --animate-infinite-scroll: infinite-scroll 20s linear infinite;
+
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  /*custom cursor*/
+  --handcursor: url(/cursor.svg) 25 25, pointer;
 }
 
 @layer base {
@@ -18,11 +32,11 @@
   }
 
   /*Tobii mods*/
-    .tobii-zoom{
-      width: 100%;
+  .tobii-zoom {
+    width: 100%;
   }
   .tobii__slide figure > img {
-      padding-bottom: 50px;
+    padding-bottom: 50px;
   }
 
   /* iframe {
@@ -31,13 +45,44 @@
   } */
 
   .tobii {
-      background-color: black;
+    background-color: black;
+  }
+  .atma-light {
+    font-family: "Atma", system-ui;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  .atma-regular {
+    font-family: "Atma", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .atma-medium {
+    font-family: "Atma", system-ui;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .atma-semibold {
+    font-family: "Atma", system-ui;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .atma-bold {
+    font-family: "Atma", system-ui;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  Image {
+    @apply cursor-(--handcursor);
   }
 }
 
-@layer components{
-
+@layer components {
 }
-@layer utilities{
-  
+@layer utilities {
 }
